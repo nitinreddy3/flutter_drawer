@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'category.dart';
+import 'home.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,16 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text('Drawer App'),
-          ),
-        ),
-        body: Center(
-          child: Text('A simple category pages'),
-        ),
-      ),
+      home: Home(),
+      routes: <String, WidgetBuilder>{
+        '/a': (BuildContext context) => Category()
+      },
     );
   }
 }

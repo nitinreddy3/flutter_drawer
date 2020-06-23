@@ -8,8 +8,14 @@ class Category extends StatefulWidget {
 class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: Text('Category')),
+        body: Center(
+          child: Text('Category page'),
+        ),
+      ),
     );
   }
 }
